@@ -5,9 +5,9 @@ Lazy            ← 1
 BackgroundColor ← °hsv ⚂_⚂_1
 ResWidth        ← 1024
 ResHeight       ← 1024
-WinScale        ← 1
+WinScale        ← 1.5
 
-Iterations     ← 500
+Iterations     ← 64
 BurningShipify ← 1
 
 ThreadChunks ← 16
@@ -50,7 +50,7 @@ Iris~Open × WinScale ResWidth_ResHeight "Fractal Zoomer"
     ▽₂ 4 RenderFractal
   )
 
-  Render ← ⨬(RenderLowRes|RenderFractal)⊸HighRes
+  Render ← memo(⨬(RenderLowRes|RenderFractal)⊸HighRes)
 └─╴
 
 ┌─╴RenderState
@@ -85,7 +85,7 @@ RenderState~New (
   0 0                                                                                      # IsMoving & Force Lazy
 )
 
-◌Iris~Loop!(
+Iris~Loop!(
   ⊸RenderState~Render RenderState~UpdateFromMouse
   Draw~Text [ln Screen~FPS 1 1] 20 10_10 Screen~FPS
   Draw~Text White 20 10_30 ˜$"Pos = _ + _i" °ℂ ⊸(Fractal~Position RenderState~CurrentRender)
@@ -93,3 +93,4 @@ RenderState~New (
   Draw~Text White 20 10_70 °⋕ ˜ⁿ2 ⊸(Fractal~Zoom RenderState~CurrentRender)
   Draw~Text White 20 10_90 $"Force Lazy is _ [T to Toggle]" ⨬("FALSE"|"TRUE") ⊸(RenderState~ForceLazy)
 )
+$"Stopped at location _ + _i with zoom level _" Fractal!⊃(: °ℂ Position|˜ⁿ2Zoom) RenderState~FractalObj
