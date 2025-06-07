@@ -11,6 +11,8 @@ Features
 
 Thank you to jan Makoso for helping with this project!
 
-![image](https://github.com/user-attachments/assets/70a02481-bdf9-4091-96c7-d1b9c16254d9) ![image](https://github.com/user-attachments/assets/1c0c5a61-b572-4632-ba3c-ae06f97f1ad6) ![image](https://github.com/user-attachments/assets/5faf4df9-2eb5-4bc9-aed7-af70ebc76cf1)
+![image](https://github.com/user-attachments/assets/70a02481-bdf9-4091-96c7-d1b9c16254d9 = 250x250) 
+![image](https://github.com/user-attachments/assets/1c0c5a61-b572-4632-ba3c-ae06f97f1ad6 = 250x250) 
+![image](https://github.com/user-attachments/assets/5faf4df9-2eb5-4bc9-aed7-af70ebc76cf1 = 250x250)
 
 Have fun!
