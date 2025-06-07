@@ -15,9 +15,13 @@ Thank you to jan Makoso for helping with this project!
 
 ## Controls
 **Left Mouse Drag** - Pan
+
 **Right Mouse Drag** - Pan (Z Plane)
+
 **Scroll Wheel** - Zoom
+
 **R** - Reset location in the Z plane
+
 **T** - Toggle Force-Lazy rendering
 
 Lazy rendering decreases the quality of the rendering by four times panning or zooming until you're done and renders at full quality. This is done to make movement less annoying.
