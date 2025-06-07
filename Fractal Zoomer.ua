@@ -7,6 +7,7 @@ ResWidth        ← 1024
 ResHeight       ← 1024
 WinScale        ← 1
 
+Iterations     ← 500
 BurningShipify ← 1
 
 ThreadChunks ← 16
@@ -25,7 +26,7 @@ Iris~Open × WinScale ResWidth_ResHeight "Fractal Zoomer"
 
   # RenderedChunk ? CWindow
   RenderChunk ← (
-    100 ≡₀(°⊟₃°□)
+    Iterations ≡₀(°⊟₃°□)
     ⨬(⟜⍥(⊃(+⊙(<2⌵)|⊸+°√⋅⊙∘))         # BURNING SHIP
     | ⟜⍥(⊃(+⊙(<2⌵)|⊸+°√ ⍜°ℂ(∩⌵)⋅⊙∘)) # MANDELBROT
     ) BurningShipify
