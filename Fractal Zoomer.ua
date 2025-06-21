@@ -76,7 +76,7 @@ Iris~Open × WinScale ResWidth_ResHeight "Fractal Zoomer"
   )
 
   # ? RenderState
-  Render ← Iris~Texture~DrawScaled⊃(TextureObj|WinScale 0_0)
+  Render ← Iris~Draw~Background TextureObj
 └─╴
 
 RenderState~New (
@@ -87,7 +87,7 @@ RenderState~New (
 
 Iris~Loop!(
   ⊸RenderState~Render RenderState~UpdateFromMouse
-  Draw~Text [ln Screen~FPS 1 1] 20 10_10 Screen~FPS
+  Draw~Text [°ₑ Screen~FPS 1 1] 20 10_10 Screen~FPS
   Draw~Text White 20 10_30 ˜$"Pos = _ + _i" °ℂ ⊸(Fractal~Position RenderState~CurrentRender)
   Draw~Text White 20 10_50 $"Z = _ + _i [R to Reset]" °ℂ ⊸(Fractal~Z RenderState~CurrentRender)
   Draw~Text White 20 10_70 °⋕ ˜ⁿ2 ⊸(Fractal~Zoom RenderState~CurrentRender)
